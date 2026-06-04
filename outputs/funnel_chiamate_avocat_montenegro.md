@@ -1,6 +1,7 @@
 # Analisi funnel chiamate - Avocat Montenegro
 
 Data: 2 giugno 2026
+Aggiornamento: 4 giugno 2026
 
 ## Diagnosi rapida
 
@@ -13,8 +14,30 @@ Il sito ha CTA telefoniche presenti, ma il funnel non e ancora abbastanza "call-
 - Pagine consulenza online RO/IT/EN: HTTP 200, telefono presente, 1 form per pagina.
 - Tag Google Ads trovato: `AW-927014901`.
 - Ogni pagina controllata ha link `tel:` multipli.
-- WhatsApp compare nel codice, ma va verificato se e un vero CTA visibile o solo codice/plugin/social share.
+- WhatsApp compare nel codice ed e stato aggiunto come CTA reale nella barra mobile.
 - Le pagine sono pesanti: circa 175-194 KB di solo HTML, 24 CSS, 26-27 JS, 17 script inline, 21-22 immagini.
+
+## Stato al 4 giugno 2026
+
+- Plugin `Avocat Call Funnel Fix` installato e attivo su WordPress.
+- Verifica live positiva su:
+  - `https://avocat-montenegro.ro/`
+  - `https://avocat-montenegro.ro/it/`
+  - `https://avocat-montenegro.ro/en/`
+  - `https://avocat-montenegro.ro/contact/`
+  - `https://avocat-montenegro.ro/it/contatto/`
+  - `https://avocat-montenegro.ro/en/contact-me/`
+- Le pagine live contengono:
+  - barra `avocat-call-funnel-bar`
+  - evento `phone_click`
+  - link WhatsApp `wa.me/40745776743`
+  - conversion label Google Ads `AW-927014901/KBwBCL-mioscEPW_hLoD`
+- In Google Ads, Diagnostica conversioni mostra che le azioni di conversione ottimizzate sono attive.
+- Nella selezione campagne Google Ads sono visibili come attive:
+  - `Codex_Inglese`
+  - `Codex_Italia`
+  - `Codex_Romania`
+- Non cambiare bidding alla cieca finche non ci sono conversioni recenti reali: con tracking appena corretto, mantenere una fase controllata prima di spingere pienamente su Smart Bidding.
 
 ## Dove si perde l'utente
 
@@ -79,6 +102,8 @@ Il sito ha CTA telefoniche presenti, ma il funnel non e ancora abbastanza "call-
      - `Codex_Inglese`
      - `Codex_Italia`
      - `Avocat Urbanism Oradea`, solo tramite keyword themes se Smart campaign lo permette.
+   - Dopo 7-14 giorni di segnali reali, valutare passaggio a `Maximize conversions`.
+   - Prima di allora, preferire controllo CPC o `Maximize Clicks` con limite CPC, evitando traffico informativo.
 
 ## Ipotesi principale
 
